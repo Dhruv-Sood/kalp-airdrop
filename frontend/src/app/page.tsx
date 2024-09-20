@@ -4,6 +4,7 @@ import { useKalpApi } from '@/hooks/useKalpAPI';
 import HyperText from '@/components/magicui/hyper-text';
 import { CoolMode } from '@/components/magicui/cool-mode';
 
+
 const Home: React.FC = () => {
   const { claim, balanceOf, totalSupply, loading } = useKalpApi();
   const [walletAddress, setWalletAddress] = useState("");
@@ -106,6 +107,7 @@ const Home: React.FC = () => {
           text="Total Airdrop Tokens Claimed"
         />
         <p className='text-6xl text-blue-400 font-bold'>{totalAirdrop}</p>
+
       </div>
     </div>
   );
