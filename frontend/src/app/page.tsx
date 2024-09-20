@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useKalpApi } from '@/hooks/useKalpAPI';
 import HyperText from '@/components/magicui/hyper-text';
-import { CoolMode } from '@/components/magicui/cool-mode';
+
 
 
 const Home: React.FC = () => {
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
             className='border border-gray-600 bg-gray-700 p-3 rounded-lg text-white w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500'
             onChange={(e) => setWalletAddress(e.target.value)}
           />
-          <CoolMode>
+
             <button
               className={`w-full py-3 rounded-lg ${loading ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-500'} text-white transition`}
               onClick={handleClaim}
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
             >
               {loading ? "Claiming..." : "Claim"}
             </button>
-          </CoolMode>
+
         </div>
 
         <div className='bg-black bg-opacity-40 backdrop-blur-md p-8 rounded-3xl shadow-lg w-full max-w-md'>
@@ -89,14 +89,14 @@ const Home: React.FC = () => {
             className='border border-gray-600 bg-gray-700 p-3 rounded-lg text-white w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500'
             onChange={(e) => setWalletAddress(e.target.value)}
           />
-          <CoolMode>
+
             <button
               className='w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition'
               onClick={handleBalanceOf}
             >
               Check Balance
             </button>
-          </CoolMode>
+
           <p className='text-lg mt-4'>Balance: <span className='text-blue-400 text-2xl'>{balance}</span></p>
         </div>
       </div>
